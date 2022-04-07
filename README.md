@@ -1,0 +1,1 @@
+Simple user directory service. A toy project to learn Haskell basics.
