@@ -30,6 +30,9 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , http-types
+    , wai
+    , warp
   default-language: Haskell2010
 
 executable haskell-user-directory-exe
@@ -42,6 +45,9 @@ executable haskell-user-directory-exe
   build-depends:
       base >=4.7 && <5
     , haskell-user-directory
+    , http-types
+    , wai
+    , warp
   default-language: Haskell2010
 
 test-suite haskell-user-directory-test
@@ -55,4 +61,10 @@ test-suite haskell-user-directory-test
   build-depends:
       base >=4.7 && <5
     , haskell-user-directory
+    , hspec
+    , http-types
+    , lens
+    , wai
+    , warp
+    , wreq
   default-language: Haskell2010
