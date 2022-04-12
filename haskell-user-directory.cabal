@@ -23,13 +23,15 @@ source-repository head
 
 library
   exposed-modules:
+      Domain
       Lib
   other-modules:
       Paths_haskell_user_directory
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , bytestring
     , http-types
     , wai
@@ -44,7 +46,8 @@ executable haskell-user-directory-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , bytestring
     , haskell-user-directory
     , http-types
@@ -61,7 +64,8 @@ test-suite haskell-user-directory-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , bytestring
     , haskell-user-directory
     , hspec

@@ -8,3 +8,6 @@ To run tests: `stack test`.
 
 ## /status
 Always returns 200 OK. Requires no auth. Usable for monitoring.
+
+## /users
+Returns list of all users

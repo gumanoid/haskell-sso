@@ -23,6 +23,7 @@ dependencies:
 - wai
 - warp
 - http-types
+- aeson
 - bytestring
 
 library:
