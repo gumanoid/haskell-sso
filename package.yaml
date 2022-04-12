@@ -25,6 +25,7 @@ dependencies:
 - http-types
 - aeson
 - bytestring
+- text
 
 library:
   source-dirs: src

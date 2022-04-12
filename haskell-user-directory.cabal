@@ -34,6 +34,7 @@ library
     , base >=4.7 && <5
     , bytestring
     , http-types
+    , text
     , wai
     , warp
   default-language: Haskell2010
@@ -51,6 +52,7 @@ executable haskell-user-directory-exe
     , bytestring
     , haskell-user-directory
     , http-types
+    , text
     , wai
     , warp
   default-language: Haskell2010
@@ -71,6 +73,7 @@ test-suite haskell-user-directory-test
     , hspec
     , http-types
     , lens
+    , text
     , wai
     , warp
     , wreq

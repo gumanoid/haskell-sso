@@ -4,7 +4,7 @@ import Test.Hspec
 import Network.Wreq
 import Control.Lens
 import Lib ( webApp )
-import Network.Wai.Handler.Warp (testWithApplication)
+import Network.Wai.Handler.Warp
 import Domain
 
 main :: IO ()
@@ -19,3 +19,8 @@ main = hspec $ do
                 resp <- asJSON =<< get ("http://localhost:" ++ show port ++  "/users") :: IO (Response [User])
                 resp ^. responseStatus . statusCode `shouldBe` 200
                 resp ^. responseBody `shouldBe` allUsers
+        it "/user/1 returns admin" $ do
+            testWithApplication (return webApp) $ \ port -> do
+                resp <- asJSON =<< get ("http://localhost:" ++ show port ++  "/user/1") :: IO (Response User)
+                resp ^. responseStatus . statusCode `shouldBe` 200
+                resp ^. responseBody `shouldBe` admin
